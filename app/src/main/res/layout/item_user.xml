@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/profile_imageUser"
+        android:layout_width="@dimen/_60ssp"
+        android:layout_height="@dimen/_60ssp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user"
+        diagonal:layout_constraintBottom_toBottomOf="parent"
+        diagonal:layout_constraintStart_toStartOf="parent"
+        diagonal:layout_constraintTop_toTopOf="parent"
+        diagonal:riv_border_color="@color/white"
+        diagonal:riv_border_width="@dimen/_4sdp"
+        diagonal:riv_oval="true"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nameUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14ssp"
+        diagonal:layout_constraintBottom_toTopOf="@+id/about"
+        diagonal:layout_constraintStart_toEndOf="@+id/profile_imageUser"
+        diagonal:layout_constraintTop_toTopOf="parent"
+        diagonal:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="@dimen/_12sdp"
+        diagonal:layout_constraintBottom_toBottomOf="@+id/profile_imageUser"
+        diagonal:layout_constraintStart_toEndOf="@+id/profile_imageUser"
+        diagonal:layout_constraintTop_toBottomOf="@+id/nameUser"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/follow"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/background_follow"
+        android:text="Follow"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:textColor="@color/white"
+        diagonal:layout_constraintBottom_toBottomOf="@+id/profile_imageUser"
+        diagonal:layout_constraintEnd_toEndOf="parent"
+        diagonal:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
